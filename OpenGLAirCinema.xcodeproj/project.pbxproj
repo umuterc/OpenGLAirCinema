@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A35CD537287819BF0035A652 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A35CD535287819BF0035A652 /* Renderer.cpp */; };
+		A35CD53A28781DCE0035A652 /* VertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A35CD53828781DCE0035A652 /* VertexBuffer.cpp */; };
+		A35CD53D28782DCC0035A652 /* IndexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A35CD53B28782DCC0035A652 /* IndexBuffer.cpp */; };
 		A3EC94FA2854B4D800441296 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3EC94F92854B4D800441296 /* main.cpp */; };
+		A3EC951C285524E000441296 /* WindowManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3EC951A285524E000441296 /* WindowManager.cpp */; };
+		A3EC951F2855254500441296 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3EC951D2855254500441296 /* Shader.cpp */; };
+		A3EC95412856234800441296 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = A3EC95402856234800441296 /* glad.c */; };
+		A3EC955428563FF500441296 /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3EC955328563FF500441296 /* libglfw.3.dylib */; };
+		A3EC955528563FF500441296 /* libglfw.3.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = A3EC955328563FF500441296 /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,18 +28,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		A3EC955628563FF500441296 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A3EC955528563FF500441296 /* libglfw.3.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A35CD5342858F8560035A652 /* stb_img.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stb_img.h; sourceTree = "<group>"; };
+		A35CD535287819BF0035A652 /* Renderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
+		A35CD536287819BF0035A652 /* Renderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Renderer.hpp; sourceTree = "<group>"; };
+		A35CD53828781DCE0035A652 /* VertexBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VertexBuffer.cpp; sourceTree = "<group>"; };
+		A35CD53928781DCE0035A652 /* VertexBuffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VertexBuffer.hpp; sourceTree = "<group>"; };
+		A35CD53B28782DCC0035A652 /* IndexBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IndexBuffer.cpp; sourceTree = "<group>"; };
+		A35CD53C28782DCC0035A652 /* IndexBuffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IndexBuffer.hpp; sourceTree = "<group>"; };
 		A3EC94F62854B4D800441296 /* OpenGLAirCinema */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGLAirCinema; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3EC94F92854B4D800441296 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A3EC951A285524E000441296 /* WindowManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WindowManager.cpp; sourceTree = "<group>"; };
+		A3EC951B285524E000441296 /* WindowManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WindowManager.hpp; sourceTree = "<group>"; };
+		A3EC951D2855254500441296 /* Shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
+		A3EC951E2855254500441296 /* Shader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Shader.hpp; sourceTree = "<group>"; };
+		A3EC95402856234800441296 /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
+		A3EC955328563FF500441296 /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = ../../../../usr/local/lib/libglfw.3.dylib; sourceTree = "<group>"; };
+		A3EC9557285679AE00441296 /* fragmentShader.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = fragmentShader.fs; sourceTree = "<group>"; };
+		A3EC9558285679D100441296 /* vertexShader.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = vertexShader.vs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A3EC94F32854B4D800441296 /* Frameworks */ = {
+		A3EC950B2854CCA200441296 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3EC955428563FF500441296 /* libglfw.3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +78,7 @@
 			children = (
 				A3EC94F82854B4D800441296 /* OpenGLAirCinema */,
 				A3EC94F72854B4D800441296 /* Products */,
+				A3EC95002854B64800441296 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +93,31 @@
 		A3EC94F82854B4D800441296 /* OpenGLAirCinema */ = {
 			isa = PBXGroup;
 			children = (
+				A35CD5342858F8560035A652 /* stb_img.h */,
+				A3EC95402856234800441296 /* glad.c */,
 				A3EC94F92854B4D800441296 /* main.cpp */,
+				A3EC951A285524E000441296 /* WindowManager.cpp */,
+				A3EC951B285524E000441296 /* WindowManager.hpp */,
+				A3EC951D2855254500441296 /* Shader.cpp */,
+				A3EC951E2855254500441296 /* Shader.hpp */,
+				A3EC9557285679AE00441296 /* fragmentShader.fs */,
+				A3EC9558285679D100441296 /* vertexShader.vs */,
+				A35CD535287819BF0035A652 /* Renderer.cpp */,
+				A35CD536287819BF0035A652 /* Renderer.hpp */,
+				A35CD53828781DCE0035A652 /* VertexBuffer.cpp */,
+				A35CD53928781DCE0035A652 /* VertexBuffer.hpp */,
+				A35CD53B28782DCC0035A652 /* IndexBuffer.cpp */,
+				A35CD53C28782DCC0035A652 /* IndexBuffer.hpp */,
 			);
 			path = OpenGLAirCinema;
+			sourceTree = "<group>";
+		};
+		A3EC95002854B64800441296 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3EC955328563FF500441296 /* libglfw.3.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,8 +128,9 @@
 			buildConfigurationList = A3EC94FD2854B4D800441296 /* Build configuration list for PBXNativeTarget "OpenGLAirCinema" */;
 			buildPhases = (
 				A3EC94F22854B4D800441296 /* Sources */,
-				A3EC94F32854B4D800441296 /* Frameworks */,
+				A3EC950B2854CCA200441296 /* Frameworks */,
 				A3EC94F42854B4D800441296 /* CopyFiles */,
+				A3EC955628563FF500441296 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -120,6 +179,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3EC94FA2854B4D800441296 /* main.cpp in Sources */,
+				A35CD537287819BF0035A652 /* Renderer.cpp in Sources */,
+				A3EC951F2855254500441296 /* Shader.cpp in Sources */,
+				A3EC951C285524E000441296 /* WindowManager.cpp in Sources */,
+				A35CD53D28782DCC0035A652 /* IndexBuffer.cpp in Sources */,
+				A3EC95412856234800441296 /* glad.c in Sources */,
+				A35CD53A28781DCE0035A652 /* VertexBuffer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,9 +303,16 @@
 		A3EC94FE2854B4D800441296 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37HCJA3ABD;
 				ENABLE_HARDENED_RUNTIME = YES;
+				EXCLUDED_ARCHS = arm64;
+				HEADER_SEARCH_PATHS = (
+					/Users/umutercan/Desktop/OpenGLAirCinema/Dependency/include,
+					/Users/umutercan/Desktop/OpenGLAirCinema/Dependency/external,
+				);
+				LIBRARY_SEARCH_PATHS = /Users/umutercan/Desktop/OpenGLAirCinema/Dependency/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,9 +320,16 @@
 		A3EC94FF2854B4D800441296 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37HCJA3ABD;
 				ENABLE_HARDENED_RUNTIME = YES;
+				EXCLUDED_ARCHS = arm64;
+				HEADER_SEARCH_PATHS = (
+					/Users/umutercan/Desktop/OpenGLAirCinema/Dependency/include,
+					/Users/umutercan/Desktop/OpenGLAirCinema/Dependency/external,
+				);
+				LIBRARY_SEARCH_PATHS = /Users/umutercan/Desktop/OpenGLAirCinema/Dependency/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
