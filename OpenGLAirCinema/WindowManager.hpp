@@ -30,8 +30,6 @@ public:
     uint16_t windowWidth;
     uint16_t windowHeight;
     std::string windowTitle;
-private:
- 
     GLFWwindow* window;
 
 };

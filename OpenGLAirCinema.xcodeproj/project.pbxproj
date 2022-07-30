@@ -10,6 +10,7 @@
 		A35CD537287819BF0035A652 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A35CD535287819BF0035A652 /* Renderer.cpp */; };
 		A35CD53A28781DCE0035A652 /* VertexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A35CD53828781DCE0035A652 /* VertexBuffer.cpp */; };
 		A35CD53D28782DCC0035A652 /* IndexBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A35CD53B28782DCC0035A652 /* IndexBuffer.cpp */; };
+		A3B480552892F39500A6AFEF /* CameraClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3B480532892F39500A6AFEF /* CameraClass.cpp */; };
 		A3EC94FA2854B4D800441296 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3EC94F92854B4D800441296 /* main.cpp */; };
 		A3EC951C285524E000441296 /* WindowManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3EC951A285524E000441296 /* WindowManager.cpp */; };
 		A3EC951F2855254500441296 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3EC951D2855254500441296 /* Shader.cpp */; };
@@ -49,6 +50,8 @@
 		A35CD53928781DCE0035A652 /* VertexBuffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VertexBuffer.hpp; sourceTree = "<group>"; };
 		A35CD53B28782DCC0035A652 /* IndexBuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IndexBuffer.cpp; sourceTree = "<group>"; };
 		A35CD53C28782DCC0035A652 /* IndexBuffer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IndexBuffer.hpp; sourceTree = "<group>"; };
+		A3B480532892F39500A6AFEF /* CameraClass.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CameraClass.cpp; sourceTree = "<group>"; };
+		A3B480542892F39500A6AFEF /* CameraClass.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CameraClass.hpp; sourceTree = "<group>"; };
 		A3EC94F62854B4D800441296 /* OpenGLAirCinema */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGLAirCinema; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3EC94F92854B4D800441296 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A3EC951A285524E000441296 /* WindowManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WindowManager.cpp; sourceTree = "<group>"; };
@@ -108,6 +111,8 @@
 				A35CD53928781DCE0035A652 /* VertexBuffer.hpp */,
 				A35CD53B28782DCC0035A652 /* IndexBuffer.cpp */,
 				A35CD53C28782DCC0035A652 /* IndexBuffer.hpp */,
+				A3B480532892F39500A6AFEF /* CameraClass.cpp */,
+				A3B480542892F39500A6AFEF /* CameraClass.hpp */,
 			);
 			path = OpenGLAirCinema;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				A35CD53D28782DCC0035A652 /* IndexBuffer.cpp in Sources */,
 				A3EC95412856234800441296 /* glad.c in Sources */,
 				A35CD53A28781DCE0035A652 /* VertexBuffer.cpp in Sources */,
+				A3B480552892F39500A6AFEF /* CameraClass.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

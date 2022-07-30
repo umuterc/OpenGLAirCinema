@@ -13,6 +13,7 @@
 #include<glm/gtc/type_ptr.hpp>
 #include"Shader.hpp"
 #include"WindowManager.hpp"
+#include "CameraClass.hpp"
 #define STB_IMAGE_IMPLEMENTATION
 #include"stb_img.h"
 
@@ -31,7 +32,9 @@
 #define ROTATION_SCALE 0.1f
 
 
-void loadTexture(unsigned int& texture, const char* dir, unsigned long colorDim){
+
+
+void loadTexture(unsigned int& texture, const char* dir, GLint colorDim){
     
     GLCall(glGenTextures(1,&texture));
     GLCall(glBindTexture(GL_TEXTURE_2D, texture));
@@ -60,10 +63,28 @@ void loadTexture(unsigned int& texture, const char* dir, unsigned long colorDim)
     
 }
 
+/*--------------------------------------------camera------------------------------------------*/
+CameraClass* camera= new CameraClass();
+
+void processInput(GLFWwindow *window,const float deltaTime)
+{
+    
+    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+        camera->ProcessKeyboard(FORWARD, deltaTime);
+    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+        camera->ProcessKeyboard(BACKWARD, deltaTime);
+    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+        camera->ProcessKeyboard(LEFT, deltaTime);
+    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+        camera->ProcessKeyboard(RIGHT, deltaTime);
+}
+
+
 int main() {
 
     /*------------------------------------------Window------------------------------------------*/
     WindowManager* windowManager= new WindowManager(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_NAME);
+    
     
     gladLoadGL();
 
@@ -122,11 +143,11 @@ int main() {
     };
     
     
-    
-    unsigned int indices[] = {
-        0, 1, 3, // first triangle
-        1, 2, 3  // second triangle
-    };
+//
+//    unsigned int indices[] = {
+//        0, 1, 3, // first triangle
+//        1, 2, 3  // second triangle
+//    };
     
     GLuint VAO;//buffer object
 
@@ -159,10 +180,13 @@ int main() {
     /*--------------------------------------------Shaders------------------------------------------*/
 
     Shader* myShaders = new Shader("/Users/umutercan/Desktop/OpenGLAirCinema/OpenGLAirCinema/vertexShader.vs", "/Users/umutercan/Desktop/OpenGLAirCinema/OpenGLAirCinema/fragmentShader.fs");
-
-
-
+    
+    
+    /*--------------------------------------------camera------------------------------------------*/
+    
+    float lastFrame=0.0f,deltaTime;
     uint32_t rotateDegree=0;
+    
     /*--------------------------------------------Render-------------------------------------------*/
     while (!windowManager->WindowShouldClose()) {
         
@@ -181,7 +205,7 @@ int main() {
         
         //view
         glm::mat4 view=glm::mat4(1);
-        view= glm::translate(view, glm::vec3(0.0f,0.0f,-3.0f));
+        view= camera->GetViewMatrix();
         unsigned int viewLoc= glGetUniformLocation(myShaders->ID,"view");
         GLCall(glUniformMatrix4fv(viewLoc,1,GL_FALSE, glm::value_ptr(view)));
         
@@ -203,7 +227,13 @@ int main() {
         GLCall(glDrawArrays(GL_TRIANGLES,0,36));
         windowManager->SwapBuffers();
         windowManager->PollEvents();
-    
+        
+        float currentFrame = glfwGetTime();
+        deltaTime = currentFrame - lastFrame;
+        lastFrame = currentFrame;
+        
+        processInput(windowManager->window,deltaTime);
+        
     }
 
     glDeleteVertexArrays(1, &VAO);
